@@ -22,3 +22,7 @@
 .bs-callout p:last-child {
     margin-bottom: 0;
 }
+
+h4 a:hover{
+  text-decoration: none;
+}

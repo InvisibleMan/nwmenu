@@ -10,4 +10,4 @@ def hello_world():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run('192.168.1.249', 4000)
+    app.run(None, 4000)
