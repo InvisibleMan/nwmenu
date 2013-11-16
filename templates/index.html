@@ -1,27 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню | Текущая неделя</title>
-    <!-- Bootstrap -->
-    <link href="/static/css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="/static/css/sticky-footer.css" rel="stylesheet">
-    <link href="/static/css/nwmenu.css" rel="stylesheet">
-  </head>
-  <body>
-    <div id="wrap">
-
-      <!-- Begin page content -->
-      <div class="container">
+{% extends "layout.html" %}
+{% block title %}Текущая неделя{% endblock %}
+{% block content %}
         <div class="page-header">
           <h1>Текущая неделя</h1>
         </div>
-<!--         <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
-        <p>Use <a href="../sticky-footer-navbar">the sticky footer with a fixed navbar</a> if need be, too.</p>
 
-        <h2>Эта неделя</h2> -->
         <div class="bs-callout bs-callout-info">
           <h4><a href="/">Завтрак <span class="btn btn-primary btn-xs">добавить</span></a></h4>
           <ul>
@@ -29,13 +12,13 @@
             <li><code>Запиканка</code></li>
             <li>Запиканка</li>
           </ul>
-<!--           <p>
-            <a href="/" class="btn btn-primary btn-sm">Добавить</a>
-          </p> -->
         </div>
 
-        <div class="bs-callout bs-callout-info">
-          <h4><a href="/">Первое блюдо <span class="btn btn-primary btn-xs">добавить</span></a></h4>
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+              <h3 class="panel-title"><a href="/week/next/add/1">Первое блюдо <span class="glyphicon glyphicon-plus"></span></a></h3>
+          </div>
+          <div class="panel-body">
           <p>
             <a href="/cooked/123" style="margin-left:20px" class="btn btn-success btn-xs" title="Приготовлено"><span class="glyphicon glyphicon-ok"></span></a>
             <a href="/move-next-week/123" class="btn btn-warning btn-xs" title="Перенести"><span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -51,25 +34,18 @@
             <a href="/move-next-week/123" class="btn btn-warning btn-xs" title="Перенести"><span class="glyphicon glyphicon-chevron-right"></span></a>
             Щи с кислой капустой
           </p>
+          </div>
         </div>
-
-        <div class="bs-callout bs-callout-info">
-          <h4><a href="/">Второе блюдо <span class="btn btn-primary btn-xs">добавить</span></a></h4>
-          <p><strong>Гарнир:</strong> картофель</p>
+        
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title"><a href="/week/next/add/2"><strong>Второе блюдо</strong> <span class="glyphicon glyphicon-plus"></span></a></h3>
+          </div>
+          <div class="panel-body">
+            <p><strong>Гарнир:</strong> картофель</p>
+          </div>
         </div>
-
-
-        <!-- <a href="/" class="btn btn-warning">Добавить</a> -->
 
         <hr />
         <a href="/next" class="btn btn-default">Следующая неделя</a>
-      </div>
-    </div>
-
-    <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Copyright 2013 <a href="/">DLarionov</a>. <a href="/about">О проекте</a>.</p>
-      </div>
-    </div>
-  </body>
-</html>
+{% endblock %}
